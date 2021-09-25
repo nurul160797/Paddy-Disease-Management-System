@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<form action="index.php" method="post">
+  <div class="content" align="center">
+    <h1>Login</h1>
+    <p>Sila isi untuk log masuk.</p> 
+    <hr>
+    <label for="email"><b>Email</b></label><br>
+    <input type="text" placeholder="" name="email" required><br><br>
+    <label for="pass"><b>Password</b></label><br>
+    <input type="password" placeholder="" name="pass" required><br><br>
+
+    <div class="clearfix">
+      <button type="submit" onclick="document.getElementById('id01').style.display='none'" class="signupbtn">Log Masuk</button> 
+      <button type="reset"  onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Batal</button><br><br>
+      <p><a href="register.html">Daftar Akaun</a></p>
+    </div>
+  </div>
+</form>
+</body>
+</html>

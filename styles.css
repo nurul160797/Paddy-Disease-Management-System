@@ -1,0 +1,107 @@
+
+body {background-color: rgb(235, 247, 141);}
+
+.content {
+  max-width: 500px;
+  margin: auto;
+  background: rgb(235, 247, 141);
+  padding: 10px;
+}
+
+.about {
+  float: center;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  padding-left: 20px;
+ 
+}
+.function {
+  
+  padding-bottom: 20px;
+  padding-left: 20px;
+  margin: auto
+}
+
+.contact{
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 14px 0px 22px 0;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid rgb(193, 122, 221);
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+  margin: auto;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+  margin: auto;
+}
+
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 100px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}

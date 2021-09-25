@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    
+  <script>
+    function previewFile() {
+      const preview = document.querySelector('img');
+      const file = document.querySelector('input[type=file]').files[0];
+      const reader = new FileReader();
+
+      reader.addEventListener("load", function () {
+        // convert image file to base64 string
+        preview.src = reader.result;
+      }, false);
+
+      if (file) {
+        reader.readAsDataURL(file);
+      }
+    }
+  </script>
+</head>
+<body>
+<form action="register.php" enctype="multipart/form-data" method="post" onsubmit="return confirm('Anda Pasti Mahu Daftar?');"><br>
+  <div class="content" align="center">
+    <h1>Borang Pendaftaran</h1>
+    <p>Sila isi borang di bawah untuk daftar.</p> 
+    <hr>
+    <img src="" height = "200"><br>
+    <input class="button" onchange="previewFile()" type="file" name="uploaded_file"><br><br>
+    <label for="id"><b>No ID</b></label><br>
+    <input type="text" placeholder="" name="id" title="Must contain at least 6 number" required><br><br>
+    <label for="name"><b>Nama</b></label><br>
+    <input type="text" placeholder="" name="name" required><br><br>
+    <label for="email"><b>Email</b></label><br>
+    <input type="text" placeholder="" name="email" required><br><br>
+    <label for="pass"><b>Kata Laluan</b></label><br>
+    <input type="password" placeholder="" name="pass"
+    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 characters" required><br><br>
+
+    <div class="clearfix">
+      <button type="submit" onclick="document.getElementById('id01').style.display='none'" class="signupbtn">Daftar</button> 
+      <button type="reset"  onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Batal</button><br><br>
+      <p><a href="login.html">Sudah Daftar? Log Masuk</a></p>
+    </div>
+  </div>
+
+  <script>
+    function myfunction(){
+      var txt;
+      var r = confirm("Register new user?");
+      if (r == true){
+        document.getElementById("register").submit();
+      }else {
+    
+      }
+    }
+    </script>
+</form>
+</body>
+</html>
